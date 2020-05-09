@@ -1,0 +1,17 @@
+{
+    "name": "com.amheklerior.core-library.editor",
+    "references": [
+        "GUID:660abf58149f82c43b6e93a919aef8ec"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
