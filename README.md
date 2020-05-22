@@ -18,19 +18,19 @@ This library is designed with two simple principles in mind:
  - [Support][]
  - [Licence][]
 
-[Features]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Features
-[Getting Started]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Getting-Started
-[Requirements]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Requirements
-[Roadmap]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Roadmap
-[Support]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Support
-[Licence]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Licence
+[Features]: https://github.com/Amheklerior/unity-core-library#Features
+[Getting Started]: https://github.com/Amheklerior/unity-core-library#Getting-Started
+[Requirements]: https://github.com/Amheklerior/unity-core-library#Requirements
+[Roadmap]: https://github.com/Amheklerior/unity-core-library#Roadmap
+[Support]: https://github.com/Amheklerior/unity-core-library#Support
+[Licence]: https://github.com/Amheklerior/unity-core-library#Licence
 
 
 
 ## Features
  - [Event System Framework][]
   
-[Event System Framework]: link-to-docs
+[Event System Framework]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System-Docs.md
 
 
 
@@ -38,8 +38,8 @@ This library is designed with two simple principles in mind:
 To be ready to use this tools, you simply have to install the package in your Unity project. 
 You can import the package either [using the Unity Package Manager (UPM)][] or [manually][].  
 
-[using the Unity Package Manager (UPM)]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Import-the-Package-Using-the-UPM  
-[manually]: https://github.com/Amheklerior/unity-core-library/blob/master/README.md#Manually-Import-the-Package
+[using the Unity Package Manager (UPM)]: https://github.com/Amheklerior/unity-core-library#Import-the-Package-Using-the-UPM  
+[manually]: https://github.com/Amheklerior/unity-core-library#Manually-Import-the-Package
 
 
 ### Import the Package Using the UPM
@@ -56,7 +56,7 @@ To manually install the package, follow these steps:
 
 2. Edit your __manifest.json__ file in your Packages folder and add the following line as a dependency: 
 
-      "com.amheklerior.core-library": "file:com.amheklerior.core-library" 
+		"com.amheklerior.core-library": "file:com.amheklerior.core-library" 
 
 3. Follow the workflow described in the [Assembly Definitions][] Unity manual page, and add a reference 
    to __com.amheklerior.core-library.runtime.asmdef__
@@ -91,5 +91,5 @@ please visit the [Issue-Tracker][]
 ## Licence
 This package is licenced under the [MIT Licence][MIT Licence]
 
-[MIT Licence]: https://github.com/Amheklerior/unity-core-library/blob/master/LICENSE  
+[MIT Licence]: https://github.com/Amheklerior/unity-core-libraryLICENSE  
 
