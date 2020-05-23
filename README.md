@@ -30,7 +30,8 @@ This library is designed with two simple principles in mind:
 ## Features
  - [Event System Framework][]
   
-[Event System Framework]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System-Docs.md
+[Event System Framework]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System-Docs.md 
+<todo: change the link after merging into master>
 
 
 
@@ -91,5 +92,6 @@ please visit the [Issue-Tracker][]
 ## Licence
 This package is licenced under the [MIT Licence][MIT Licence]
 
-[MIT Licence]: https://github.com/Amheklerior/unity-core-libraryLICENSE  
+[MIT Licence]: https://github.com/Amheklerior/unity-core-library/blob/develop/LICENSE  
+<todo: change the link after merging into master>
 
