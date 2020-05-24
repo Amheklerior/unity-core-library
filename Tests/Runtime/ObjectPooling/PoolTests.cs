@@ -4,9 +4,9 @@ using System;
 using Amheklerior.Core.Test.Utilities;
 
 namespace Amheklerior.Core.ObjectPooling.Tests {
-
+    
     internal class PoolTests {
-        
+
         private static readonly int DEFAULT_CAPACITY = 100;
 
         private IPool<TestObject> _pool;
@@ -18,7 +18,7 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
         [OneTimeSetUp]
         public void BeforeAll() {
             _mockedCreateFunc = Substitute.For<CreationFunc<TestObject>>();
-            _mockedCreateFunc.Invoke().Returns(new TestObject());
+            _mockedCreateFunc.Invoke().Returns(GetNewInstance());
         }
 
         [TearDown]
@@ -28,6 +28,8 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
         public void AfterAll() => _mockedCreateFunc = null;
 
         #endregion
+
+        #region Tests
 
         [Test]
         public void By_default_the_pool_is_created_and_initialized_with_capacity_of_100() {
@@ -50,7 +52,7 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
 
             // Act
             var resultAfterExceedingCapacity = _pool.Get();
-            
+
             // Assert
             Assert.IsNull(resultAfterExceedingCapacity);
             _mockedCreateFunc.DidNotReceive().Invoke();
@@ -79,7 +81,7 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
             Assert.Throws<ArgumentException>(() => new Pool<TestObject>(_mockedCreateFunc, capacity));
 
         }
-        
+
         [Test]
         public void When_the_pool_is_not_allowed_to_expand_then_the_amount_of_objects_that_can_be_taken_from_it_cannot_exeed_the_initial_capacity() {
 
@@ -125,7 +127,7 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
             for (int i = 0; i < capacity; i++) _pool.Get();
 
             // Act
-            _pool.Put(new TestObject());
+            _pool.Put(GetInstanceThatDoesNotBelongToThePool());
 
             // Assert
             Assert.IsNull(_pool.Get());
@@ -166,6 +168,10 @@ namespace Amheklerior.Core.ObjectPooling.Tests {
 
         }
 
+        #endregion
+
+        private TestObject GetNewInstance() => new TestObject();
+        private TestObject GetInstanceThatDoesNotBelongToThePool() => GetNewInstance();
     }
 
 }
