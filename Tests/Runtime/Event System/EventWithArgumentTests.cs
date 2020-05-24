@@ -2,6 +2,7 @@
 using NSubstitute;
 using System;
 using UnityEngine;
+using Amheklerior.Core.Test.Utilities;
 
 namespace Amheklerior.Core.EventSystem.Tests {
     
@@ -130,5 +131,9 @@ namespace Amheklerior.Core.EventSystem.Tests {
     internal class EventWithArgument_Vector3DInt : EventWithArgumentTests<Vector3Int> {
         protected override Vector3Int GetRandomEventArgument() => new Vector3Int(_argRandomizer.Next(), _argRandomizer.Next(), _argRandomizer.Next());
     }
-    
+
+    internal class EventWithArgument_Object : EventWithArgumentTests<TestObject> {
+        protected override TestObject GetRandomEventArgument() => new TestObject();
+    }
+
 }
