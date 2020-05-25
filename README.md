@@ -28,9 +28,11 @@ This library is designed with two simple principles in mind:
 
 
 ## Features
- - [Event System Framework][]
+ - [Event System][]
+ - [Object Pooling][]
   
-[Event System Framework]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System-Docs.md 
+[Event System]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System.md 
+[Object Pooling]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Object-Pooling.md 
 <todo: change the link after merging into master>
 
 
