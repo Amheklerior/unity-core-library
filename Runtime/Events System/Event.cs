@@ -37,17 +37,17 @@ namespace Amheklerior.Core.EventSystem {
 
         public override void Subscribe(Action eventReaction) {
             base.Subscribe(eventReaction);
-            Debug.Write($"The action {eventReaction} has been added to the list of actions to perform when the event {this} occurs!");
+            Debug.Write($"An action subscribed as a reaction to the event: {this}.");
         }
 
         public override void Unsubscribe(Action eventReaction) {
             base.Unsubscribe(eventReaction);
-            Debug.Write($"The action {eventReaction} has been removed from the list of actions to perform when the event {this} occurs!");
+            Debug.Write($"An action unsubscribed from the event: {this}.");
         }
 
         public override void UnsibscribeAll() {
             base.UnsibscribeAll();
-            Debug.Write($"All the actions to perform when the event {this} occurs have been removed!");
+            Debug.Write($"All actions unsubscribed from the event: {this}.");
         }
     }
 
@@ -60,17 +60,17 @@ namespace Amheklerior.Core.EventSystem {
 
         public override void Subscribe(Action<TEventData> eventReaction) {
             base.Subscribe(eventReaction);
-            Debug.Write($"The action {eventReaction} has been added to the list of actions to perform when the event {this} occurs!");
+            Debug.Write($"An action subscribed as a reaction to the event: {this}.");
         }
 
         public override void Unsubscribe(Action<TEventData> eventReaction) {
             base.Unsubscribe(eventReaction);
-            Debug.Write($"The action {eventReaction} has been removed from the list of actions to perform when the event {this} occurs!");
+            Debug.Write($"An action unsubscribed from the event: {this}.");
         }
 
         public override void UnsibscribeAll() {
             base.UnsibscribeAll();
-            Debug.Write($"All the actions to perform when the event {this} occurs have been removed!");
+            Debug.Write($"All actions unsubscribed from the event: {this}.");
         }
     }
 
