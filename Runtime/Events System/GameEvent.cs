@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System;
+using Amheklerior.Core.Common;
 
 namespace Amheklerior.Core.EventSystem {
     
     [CreateAssetMenu(menuName = "Core/Event System/Game Event", order = 1)]
-    public class GameEvent : ScriptableObject, IEvent {
-
-#if UNITY_EDITOR
-        [SerializeField] protected bool _debugMode = false;
-        [SerializeField, Multiline] protected string _description;
-#endif
+    public class GameEvent : RichScriptableObject, IEvent {
+        
         protected IEvent _event;
 
         private void OnEnable() {
@@ -30,12 +27,8 @@ namespace Amheklerior.Core.EventSystem {
     }
     
     
-    public abstract class GameEvent<TEventData> : ScriptableObject, IEvent<TEventData> {
-
-#if UNITY_EDITOR
-        [SerializeField] protected bool _debugMode = false;
-        [SerializeField, Multiline] protected string _description;
-#endif
+    public abstract class GameEvent<TEventData> : RichScriptableObject, IEvent<TEventData> {
+        
         private IEvent<TEventData> _event;
 
         private void OnEnable() {
