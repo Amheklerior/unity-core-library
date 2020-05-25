@@ -12,7 +12,7 @@ namespace Amheklerior.Core.EventSystem {
         protected virtual void Awake() {
             if (!_gameEvent) {
                 Debug.LogError("No game event has been set in the inspector. ", this);
-                _gameEvent = ScriptableObject.CreateInstance<GameEvent>();
+                throw new MissingReferenceException();
             }
         }
 
@@ -30,7 +30,7 @@ namespace Amheklerior.Core.EventSystem {
         protected virtual void Awake() {
             if (!_gameEvent) {
                 Debug.LogError("No game event has been set in the inspector. ", this);
-                _gameEvent = ScriptableObject.CreateInstance<GameEvent<TEventData>>();
+                throw new MissingReferenceException();
             }
         }
 
