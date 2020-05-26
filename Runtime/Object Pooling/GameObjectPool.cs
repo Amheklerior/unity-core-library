@@ -24,6 +24,7 @@ namespace Amheklerior.Core.ObjectPooling {
 
         #endregion
 
+
         private IPool<GameObject> _objectPool;
 
         public Action<GameObject> OnGet {
@@ -39,6 +40,7 @@ namespace Amheklerior.Core.ObjectPooling {
 
         public void Put(GameObject instance) => _objectPool.Put(instance);
         
+
         #region Unity lifecycle
 
         private void Awake() {
@@ -53,25 +55,12 @@ namespace Amheklerior.Core.ObjectPooling {
 
         #endregion
 
+
         #region Internals
 
         protected Transform _transform;
 
         protected CreationFunc<GameObject> CreateFunc => Create;
-
-        private GameObject Create() {
-            GameObject instance = InstantiateFromPrototype(_prototype);
-            OnCreate?.Invoke(instance);
-            return instance;
-        }
-
-        private void InitializePool() {
-            var pool = GetPoolImplementation();
-            if (_automanageObjectActivation) {
-                _objectPool.OnGet += (GameObject instance) => instance.SetActive(true);
-                _objectPool.OnPut += (GameObject instance) => instance.SetActive(false);
-            }
-        }
 
         protected Action<GameObject> OnCreate { get; set; } = (GameObject instance) => instance.SetActive(false);
 
@@ -89,7 +78,21 @@ namespace Amheklerior.Core.ObjectPooling {
 #endif
         }
 
-        #endregion
+        private GameObject Create() {
+            GameObject instance = InstantiateFromPrototype(_prototype);
+            OnCreate?.Invoke(instance);
+            return instance;
+        }
 
+        private void InitializePool() {
+            var pool = GetPoolImplementation();
+            if (_automanageObjectActivation) {
+                _objectPool.OnGet += (GameObject instance) => instance.SetActive(true);
+                _objectPool.OnPut += (GameObject instance) => instance.SetActive(false);
+            }
+        }
+
+        #endregion
+		
     }
 }
