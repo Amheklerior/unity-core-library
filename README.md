@@ -33,7 +33,8 @@ This library is designed with two simple principles in mind:
   
 [Event System]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System.md 
 [Object Pooling]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Object-Pooling.md 
-<todo: change the link after merging into master>
+
+<!-- TODO: change the link after merging into master -->
 
 
 
@@ -95,5 +96,6 @@ please visit the [Issue-Tracker][]
 This package is licenced under the [MIT Licence][MIT Licence]
 
 [MIT Licence]: https://github.com/Amheklerior/unity-core-library/blob/develop/LICENSE  
-<todo: change the link after merging into master>
+
+<!-- TODO: change the link after merging into master -->
 
