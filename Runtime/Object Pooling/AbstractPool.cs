@@ -11,7 +11,7 @@ namespace Amheklerior.Core.ObjectPooling {
 
         public AbstractPool(CreationFunc<T> create, int capacity = 100, bool canExpand = false) {
             if (capacity <= 0)
-                throw new ArgumentException($"The pool capacity must be greater than zero. Was {capacity} instead");
+                throw new ArgumentException($"The pool capacity must be greater than zero. Was {capacity} instead.");
 
             _canExpand = canExpand;
             _create = create;
