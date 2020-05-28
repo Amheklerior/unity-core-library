@@ -8,7 +8,10 @@ The format is based on [Keep a Changelog][], and this project adheres to [Semant
 
 
 ## [Unreleased]
-
+### Added
+ - 	The `Timer` class 
+ - 	Unit tests for the `Timer` class
+ 
 
 ## [0.0.2] - 2020-05-26
 ### Added

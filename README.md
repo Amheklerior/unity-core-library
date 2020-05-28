@@ -30,11 +30,12 @@ This library is designed with two simple principles in mind:
 ## Features
  - [Event System][]
  - [Object Pooling][]
+ - [Time][]
   
-[Event System]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Event-System.md 
-[Object Pooling]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation/Object-Pooling.md 
-
 <!-- TODO: change the link after merging into master -->
+[Event System]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Event-System.md 
+[Object Pooling]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Object-Pooling.md 
+[Time]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Time.md 
 
 
 
@@ -95,7 +96,7 @@ please visit the [Issue-Tracker][]
 ## Licence
 This package is licenced under the [MIT Licence][MIT Licence]
 
+<!-- TODO: change the link after merging into master -->
 [MIT Licence]: https://github.com/Amheklerior/unity-core-library/blob/develop/LICENSE  
 
-<!-- TODO: change the link after merging into master -->
 
