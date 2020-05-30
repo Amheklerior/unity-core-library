@@ -31,12 +31,13 @@ This library is designed with two simple principles in mind:
  - [Event System][]
  - [Object Pooling][]
  - [Time][]
+ - [Revertible Commands][]
   
 <!-- TODO: change the link after merging into master -->
 [Event System]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Event-System.md 
 [Object Pooling]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Object-Pooling.md 
 [Time]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Time.md 
-
+[Revertible Commands]: https://github.com/Amheklerior/unity-core-library/blob/develop/Documentation~/Commands.md 
 
 
 ## Getting Started
