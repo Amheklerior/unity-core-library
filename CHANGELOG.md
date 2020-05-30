@@ -9,8 +9,12 @@ The format is based on [Keep a Changelog][], and this project adheres to [Semant
 
 ## [Unreleased]
 ### Added
- - 	The `Timer` class 
- - 	Unit tests for the `Timer` class
+ - 	The `Timer` class.
+ - 	Unit tests for the `Timer` class.
+ -  The `Command` class, which defines a revertible action.
+ - 	The `CommandExecutor` class, that tracks the sequence of all executed reversible commands.
+ -  The `GlobalCommandExecutor`, a global static class for executing commands.
+ -  The `CommandExecutorComponent` game object component. 
  
 
 ## [0.0.2] - 2020-05-26
