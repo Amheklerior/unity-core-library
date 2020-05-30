@@ -69,7 +69,7 @@ namespace Amheklerior.Core.ObjectPooling {
 
         protected virtual IPool<GameObject> GetPoolImplementation() {
 #if UNITY_EDITOR
-            _description = _description ?? $"{name} event";
+            _description = _description ?? $"GameObjectPool: {name}";
             return _debugMode
                 ? new DebuggablePool<GameObject>(CreateFunc, _poolCapacity, _allowExpansion)
                 : new Pool<GameObject>(CreateFunc, _poolCapacity, _allowExpansion);

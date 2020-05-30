@@ -5,13 +5,6 @@ namespace Amheklerior.Core.Command {
     
     internal class CommandStack : Stack<ICommand> { }
 
-    /**
-     * Maintains a stack of the last excecuted commands. 
-     * The stack is cleared as soon as a not reversable command is performed.
-     * there is no limit on how many command execution are traced.
-     * 
-     * You have to check for CanUndo before performing Undo
-     */
     public class CommandExecutor : ICommandExecutor {
         
         private readonly CommandStack _cmdStack = new CommandStack();
