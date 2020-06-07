@@ -21,5 +21,4 @@ namespace Amheklerior.Core.Command {
         }
 
     }
-
 }

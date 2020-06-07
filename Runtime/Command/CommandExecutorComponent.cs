@@ -2,18 +2,23 @@
 
 namespace Amheklerior.Core.Command {
 
-    public class CommandExecutorComponent : RichMonoBehaviour {
+    public class CommandExecutorComponent : RichMonoBehaviour, ICommandExecutor {
+        
+        #region ICommandExecutor interface forwarding 
+
+        public int Count => _executor.Count;
+        public bool CanUndo => _executor.CanUndo;
+        public ICommand LastExcecuted => _executor.LastExcecuted;
+        public void Execute(ICommand command) => _executor.Execute(command);
+        public void Undo() => _executor.Undo();
+
+        #endregion
+
+        #region Internals
 
         private ICommandExecutor _executor;
 
         private void Awake() => _executor = GetExecutorInstance();
-        
-        public void Execute(ICommand command) => _executor.Execute(command);
-
-        public void Undo() {
-            if (!_executor.CanUndo) return;
-            _executor.Undo();
-        }
 
         protected virtual ICommandExecutor GetExecutorInstance() {
 #if UNITY_EDITOR
@@ -23,6 +28,8 @@ namespace Amheklerior.Core.Command {
             return new CommandExecutor();
 #endif
         }
+
+        #endregion
 
     }
 }
