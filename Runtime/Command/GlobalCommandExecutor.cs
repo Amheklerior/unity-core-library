@@ -15,6 +15,8 @@ namespace Amheklerior.Core.Command {
 
         public static void Undo() => Executor.Undo();
 
+        public static void Clear() => Executor.Clear();
+
         #region Internals 
 
         private static CommandExecutorComponent _cmdExecutor;

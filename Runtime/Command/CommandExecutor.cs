@@ -14,7 +14,7 @@ namespace Amheklerior.Core.Command {
         public int Count => _cmdStack.Count;
 
         public virtual ICommand LastExcecuted => _cmdStack.Peek();
-
+        
         public virtual void Execute(ICommand cmd) {
             cmd.Perform();
 
@@ -23,6 +23,8 @@ namespace Amheklerior.Core.Command {
         }
 
         public virtual void Undo() => _cmdStack.Pop().Undo();
+
+        public void Clear() => _cmdStack.Clear();
 
     }
 

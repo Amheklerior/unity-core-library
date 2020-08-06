@@ -11,6 +11,7 @@ namespace Amheklerior.Core.Command {
         public ICommand LastExcecuted => _executor.LastExcecuted;
         public void Execute(ICommand command) => _executor.Execute(command);
         public void Undo() => _executor.Undo();
+        public void Clear() => _executor.Clear();
 
         #endregion
 

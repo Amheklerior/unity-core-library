@@ -7,6 +7,7 @@ namespace Amheklerior.Core.Command {
         bool CanUndo { get; }
         void Execute(ICommand command);
         void Undo();
+        void Clear();
     }
 
 }

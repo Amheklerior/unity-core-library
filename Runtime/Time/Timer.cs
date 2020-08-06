@@ -8,11 +8,11 @@ namespace Amheklerior.Core.Time {
 
         public bool IsRunning { get; private set; }
 
-        public Timer(float? expiryTime = null, Action OnTimeExpired = null) {
-            if (expiryTime != null && expiryTime <= 0)
-                throw new ArgumentException($"The expiry time must be greater than zero. Was {expiryTime} instead.");
+        public Timer(float? expiryTimeInSeconds = null, Action OnTimeExpired = null) {
+            if (expiryTimeInSeconds != null && expiryTimeInSeconds <= 0)
+                throw new ArgumentException($"The expiry time must be greater than zero. Was {expiryTimeInSeconds} instead.");
 
-            _expiryTime = expiryTime;
+            _expiryTime = expiryTimeInSeconds;
             _onTimeExpired = OnTimeExpired;
         }
 

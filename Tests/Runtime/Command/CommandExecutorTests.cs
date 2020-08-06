@@ -10,8 +10,6 @@ namespace Amheklerior.Core.Command.Tests {
 
         private ICommandExecutor _executor;
 
-        //private ICommand _cmd1, _cmd2, _cmd3;
-
 
         #region SetUp/TearDown operations
 
@@ -117,6 +115,22 @@ namespace Amheklerior.Core.Command.Tests {
 
             // Assert
             Assert.Throws<InvalidOperationException>(() => _executor.Undo());
+
+        }
+        
+        [Test]
+        public void When_clear_is_called_then_no_other_action_can_be_reverted() {
+
+            // Arrange
+            var cmd = Substitute.For<ICommand>();
+            cmd.Reversible.Returns(true);
+            _executor.Execute(cmd);
+
+            // Act
+            _executor.Clear();
+
+            // Assert
+            Assert.That(!_executor.CanUndo);
 
         }
 
