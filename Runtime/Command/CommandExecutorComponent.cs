@@ -19,7 +19,10 @@ namespace Amheklerior.Core.Command {
 
         private ICommandExecutor _executor;
 
-        private void Awake() => _executor = GetExecutorInstance();
+        private void Awake() {
+            name = GlobalCommandExecutor.EXECUTOR_NAME;
+            _executor = GetExecutorInstance();
+        }
 
         protected virtual ICommandExecutor GetExecutorInstance() {
 #if UNITY_EDITOR
