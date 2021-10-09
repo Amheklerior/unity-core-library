@@ -1,6 +1,6 @@
 {
 	"name": "com.amheklerior.core-library",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"displayName": "Core library",
 	"description": "A library of core components and scripts that can be reused across multiple Unity projects.",
 	"unity": "2019.1",
